@@ -1,0 +1,13 @@
+.mypy_cache
+.pytest_cache
+.vscode
+.idea
+__pycache__
+
+# venv paths
+venv
+.venv
+
+# files with secrets
+env
+.env
