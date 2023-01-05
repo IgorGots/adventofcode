@@ -1,10 +1,10 @@
 from aocd import get_data, submit
 
 YEAR = 2022
-DAY = 2
+DAY = 6
 
-TEST_MODE = True
-TEST_DATA = '''zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw'''
+TEST_MODE = False
+TEST_DATA = '''mjqjpqmgbljsphdztnvjfqwrcgsmlb'''
 TEST_RES_A = 11
 TEST_RES_B = 157
 
@@ -13,10 +13,18 @@ def parse_data(data):
     return data
 
 def task_a(data):
-    pass
+    for i in range(4,len(data)):
+        marker = data[i-4:i]
+        if len(marker) == len(set(marker)):
+            return i
+
 
 def task_b(data):
-    pass
+    for i in range(14,len(data)):
+        marker = data[i-14:i]
+        if len(marker) == len(set(marker)):
+            return i
+
 
 if __name__ == "__main__":
     if TEST_MODE is True:
